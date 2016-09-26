@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      name: application,bootstrap
+      uri: http://localhost:8028/
+      profile: ${config.profile:dev}
+      label: ${config.label:cust}
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:test.private.jks
+    key-password: 111111    
